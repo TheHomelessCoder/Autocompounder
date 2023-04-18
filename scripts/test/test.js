@@ -26,6 +26,7 @@ describe("AutoCompounder", function () {
 
   describe("deposit", function () {
     it("should deposit staked tokens and update user shares", async function () {
+      console.log('should this post')
       const sharesToDeposit = 1000;
       await autoCompounder.connect(addr1).deposit(sharesToDeposit);
       const userInfo = await autoCompounder.userInfo(addr1.address);
